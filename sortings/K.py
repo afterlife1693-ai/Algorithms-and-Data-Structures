@@ -1,11 +1,11 @@
 def Anti_Quick_Sort(n):
-    a = [0] * n
-    a[0] = 1
-    for s in range(2, n + 1):
-        r = s - 1
-        m =  r // 2
-        a[m], a[s-1] = s, a[m]
-    print(*a[::-1])
+    arr = [1] if n == 1 else [1, 2]
+    for i in range(3, n + 1):
+        arr.append(i)
+        arr[i-1], arr[(i-1) // 2] = arr[(i-1) // 2], arr[i-1]
+    print(*arr)
     
 n = int(input())
 Anti_Quick_Sort(n)
+
+
